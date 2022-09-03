@@ -7,8 +7,8 @@ class Rooms extends StatelessWidget {
   final List<User> onlineUsers;
 
   const Rooms({
-    Key key,
-    @required this.onlineUsers,
+    Key? key,
+    required this.onlineUsers,
   }) : super(key: key);
 
   @override

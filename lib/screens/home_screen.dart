@@ -40,8 +40,8 @@ class _HomeScreenMobile extends StatelessWidget {
   final TrackingScrollController scrollController;
 
   const _HomeScreenMobile({
-    Key key,
-    @required this.scrollController,
+    Key? key,
+    required this.scrollController,
   }) : super(key: key);
 
   @override
@@ -112,8 +112,8 @@ class _HomeScreenDesktop extends StatelessWidget {
   final TrackingScrollController scrollController;
 
   const _HomeScreenDesktop({
-    Key key,
-    @required this.scrollController,
+    Key? key,
+    required this.scrollController,
   }) : super(key: key);
 
   @override
