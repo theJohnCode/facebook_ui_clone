@@ -6,7 +6,7 @@ class Story {
   final String imageUrl;
   final bool isViewed;
 
-  const Story({
+  Story({
     required this.user,
     required this.imageUrl,
     this.isViewed = false,
