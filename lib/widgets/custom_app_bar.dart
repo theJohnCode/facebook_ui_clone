@@ -67,15 +67,15 @@ class CustomAppBar extends StatelessWidget {
               children: <Widget>[
                 UserCArd(user: currentUser),
                 const SizedBox(
-                  width: 12,
+                  width: 2,
                 ),
                 CircleButton(
                     icon: Icons.search,
-                    iconSize: 30,
+                    iconSize: 25,
                     onPressed: () => print('search')),
                 CircleButton(
                     icon: MdiIcons.facebookMessenger,
-                    iconSize: 30,
+                    iconSize: 25,
                     onPressed: () => print('Messenger')),
               ],
             ),
