@@ -1,6 +1,7 @@
 import 'package:facebook_ui_clone/models/models.dart';
 import 'package:facebook_ui_clone/widgets/circle_button.dart';
 import 'package:facebook_ui_clone/widgets/custom_tab_bar.dart';
+import 'package:facebook_ui_clone/widgets/user_card.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
@@ -50,20 +51,24 @@ class CustomAppBar extends StatelessWidget {
             ),
           ),
           Container(
-            padding: const EdgeInsets.only(top: 0),
+            color: Colors.white,
+            height: double.infinity,
             width: 600,
             child: CustomTabBar(
               icons: icons,
               selectedIndex: selectedIndex,
               onTap: onTap,
+              isBottomIndicator: true,
             ),
           ),
           Expanded(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: <Widget>[
-                UserCard(user: currentUser),
-                SizedBox(12,),
+                UserCArd(user: currentUser),
+                const SizedBox(
+                  width: 12,
+                ),
                 CircleButton(
                     icon: Icons.search,
                     iconSize: 30,
@@ -71,7 +76,7 @@ class CustomAppBar extends StatelessWidget {
                 CircleButton(
                     icon: MdiIcons.facebookMessenger,
                     iconSize: 30,
-                    onPressed: () => print('search')),
+                    onPressed: () => print('Messenger')),
               ],
             ),
           ),
