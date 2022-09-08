@@ -1,3 +1,4 @@
+import 'package:facebook_ui_clone/config/palette.dart';
 import 'package:facebook_ui_clone/models/models.dart';
 import 'package:facebook_ui_clone/widgets/widgets.dart';
 import 'package:flutter/material.dart';
@@ -30,10 +31,20 @@ class CreatePostContainer extends StatelessWidget {
                 const SizedBox(
                   width: 8,
                 ),
-                const Expanded(
+                Expanded(
                   child: TextField(
-                    decoration: InputDecoration.collapsed(
-                        hintText: 'What\'s on your mind?'),
+                    decoration: InputDecoration(
+                      contentPadding: const EdgeInsets.symmetric(
+                          vertical: 6, horizontal: 10),
+                      fillColor: Palette.scaffold,
+                      filled: true,
+                      border: OutlineInputBorder(
+                        borderSide: BorderSide.none,
+                        borderRadius: BorderRadius.circular(30.0),
+                      ),
+                      hintText:
+                          'What\'s on your mind ${currentUser.name.split(' ')[0]}?',
+                    ),
                   ),
                 ),
               ],
@@ -53,8 +64,9 @@ class CreatePostContainer extends StatelessWidget {
                       color: Colors.red,
                     ),
                     label: const Text(
-                      'Live',
-                      style: TextStyle(),
+                      'Live Video',
+                      style: TextStyle(
+                          color: Colors.black, fontWeight: FontWeight.w400),
                     ),
                     onPressed: () => print('live'),
                   ),
@@ -68,8 +80,9 @@ class CreatePostContainer extends StatelessWidget {
                       color: Colors.green,
                     ),
                     label: const Text(
-                      'Photo',
-                      style: TextStyle(),
+                      'Photo/Video',
+                      style: TextStyle(
+                          color: Colors.black, fontWeight: FontWeight.w400),
                     ),
                     onPressed: () => print('live'),
                   ),
@@ -78,12 +91,13 @@ class CreatePostContainer extends StatelessWidget {
                   ),
                   TextButton.icon(
                     icon: const Icon(
-                      Icons.video_call,
-                      color: Colors.purpleAccent,
+                      Icons.insert_emoticon,
+                      color: Colors.orange,
                     ),
                     label: const Text(
-                      'Room',
-                      style: TextStyle(),
+                      'Feeling/Activity',
+                      style: TextStyle(
+                          color: Colors.black, fontWeight: FontWeight.w400),
                     ),
                     onPressed: () => print('live'),
                   ),

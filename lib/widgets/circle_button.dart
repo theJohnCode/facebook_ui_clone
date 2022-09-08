@@ -26,11 +26,9 @@ class CircleButton extends StatelessWidget {
           ),
           child: IconButton(
             onPressed: onPressed,
-            icon: Icon(
-              icon,
-              size: iconSize,
-              color: Colors.black,
-            ),
+            icon: Icon(icon),
+            iconSize: iconSize,
+            color: Colors.black,
           ),
         ),
         showBadge
