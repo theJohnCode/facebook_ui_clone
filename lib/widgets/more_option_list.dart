@@ -5,18 +5,21 @@ import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class MoreOptionList extends StatelessWidget {
-  final List<List> _moreOptionsList = const [
-    [MdiIcons.shieldAccount, Colors.deepPurple, 'COVID-19 Info Center'],
+  final List<List> _moreOptionsList = [
+    // [MdiIcons.shieldAccount, Colors.deepPurple, 'COVID-19 Info Center'],
     [MdiIcons.accountMultiple, Colors.cyan, 'Friends'],
-    [MdiIcons.facebookMessenger, Palette.facebookBlue, 'Messenger'],
-    [MdiIcons.flag, Colors.orange, 'Pages'],
     [MdiIcons.storefront, Palette.facebookBlue, 'Marketplace'],
+    [MdiIcons.accountGroupOutline, Palette.facebookBlue, 'Group'],
     [Icons.ondemand_video, Palette.facebookBlue, 'Watch'],
+    [Icons.history, Palette.facebookBlue, 'Memories'],
+    [Icons.turned_in, Colors.purple[800], 'Saved'],
+    [MdiIcons.flag, Colors.orange, 'Pages'],
     [MdiIcons.calendarStar, Colors.red, 'Events'],
+    [MdiIcons.chevronDown, Colors.grey, 'See More'],
   ];
   final User currentUser;
 
-  const MoreOptionList({
+  MoreOptionList({
     super.key,
     required this.currentUser,
   });

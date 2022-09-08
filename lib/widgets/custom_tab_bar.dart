@@ -45,7 +45,7 @@ class CustomTabBar extends StatelessWidget {
                   e,
                   color: i == selectedIndex
                       ? Palette.facebookBlue
-                      : Colors.black38,
+                      : Colors.black45,
                   size: 30,
                 ),
               ),
