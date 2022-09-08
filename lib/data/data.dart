@@ -2,8 +2,7 @@ import 'package:facebook_ui_clone/models/models.dart';
 
 User currentUser = const User(
   name: 'Ifeanyichukwu John',
-  imageUrl:
-      'https://source.unsplash.com/2ArYn5EYYvo',
+  imageUrl: 'https://source.unsplash.com/2ArYn5EYYvo',
 );
 
 final List<User> onlineUsers = [
