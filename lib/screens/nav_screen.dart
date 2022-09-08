@@ -1,6 +1,4 @@
 import 'package:facebook_ui_clone/screens/home_screen.dart';
-import 'package:facebook_ui_clone/widgets/custom_tab_bar.dart';
-import 'package:facebook_ui_clone/widgets/responsive.dart';
 import 'package:facebook_ui_clone/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
@@ -20,17 +18,13 @@ class _NavScreenState extends State<NavScreen> {
     const Scaffold(),
     const Scaffold(),
     const Scaffold(),
-    const Scaffold(),
-    const Scaffold(),
   ];
 
   final List<IconData> _icons = [
     Icons.home,
-    Icons.ondemand_video,
-    MdiIcons.accountCircleOutline,
+    MdiIcons.storefront,
     MdiIcons.accountGroupOutline,
-    MdiIcons.bellOutline,
-    Icons.menu
+    MdiIcons.facebookGaming,
   ];
 
   int selectedTabIndex = 0;

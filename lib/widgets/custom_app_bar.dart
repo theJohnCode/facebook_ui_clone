@@ -39,15 +39,39 @@ class CustomAppBar extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
-          const Expanded(
-            child: Text(
-              'facebook',
-              style: TextStyle(
-                color: Palette.facebookBlue,
-                fontSize: 32,
-                letterSpacing: -1.2,
-                fontWeight: FontWeight.bold,
-              ),
+          Expanded(
+            child: Row(
+              children: <Widget>[
+                const Icon(
+                  MdiIcons.facebook,
+                  color: Palette.facebookBlue,
+                  size: 38,
+                ),
+                const SizedBox(
+                  width: 8,
+                ),
+                SizedBox(
+                  width: 200,
+                  height: 40,
+                  child: TextField(
+                    decoration: InputDecoration(
+                      fillColor: Palette.scaffold,
+                      filled: true,
+                      contentPadding: const EdgeInsets.symmetric(horizontal: 5),
+                      hintText: 'Search Facebook',
+                      prefixIcon: const Icon(Icons.search),
+                      hintStyle: const TextStyle(
+                        color: Colors.black38,
+                        fontWeight: FontWeight.w300,
+                      ),
+                      border: OutlineInputBorder(
+                        borderSide: BorderSide.none,
+                        borderRadius: BorderRadius.circular(30.0),
+                      ),
+                    ),
+                  ),
+                )
+              ],
             ),
           ),
           Container(
@@ -65,18 +89,24 @@ class CustomAppBar extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: <Widget>[
-                UserCArd(user: currentUser),
-                const SizedBox(
-                  width: 2,
-                ),
                 CircleButton(
-                    icon: Icons.search,
+                    icon: Icons.apps,
                     iconSize: 25,
-                    onPressed: () => print('search')),
+                    onPressed: () => print('Apps')),
                 CircleButton(
                     icon: MdiIcons.facebookMessenger,
                     iconSize: 25,
                     onPressed: () => print('Messenger')),
+                CircleButton(
+                  icon: MdiIcons.bell,
+                  iconSize: 25,
+                  onPressed: () => print('Notification'),
+                  showBadge: true,
+                ),
+                UserCArd(
+                  user: currentUser,
+                  displayname: false,
+                ),
               ],
             ),
           ),

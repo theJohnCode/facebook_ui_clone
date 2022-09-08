@@ -4,10 +4,12 @@ import 'package:flutter/material.dart';
 
 class UserCArd extends StatelessWidget {
   final User user;
+  final bool displayname;
 
   const UserCArd({
     super.key,
     required this.user,
+    this.displayname = true,
   });
 
   @override
@@ -23,7 +25,7 @@ class UserCArd extends StatelessWidget {
           ),
           Flexible(
             child: Text(
-              user.name,
+              displayname ? user.name : '',
               style: const TextStyle(fontSize: 16),
               overflow: TextOverflow.ellipsis,
             ),
