@@ -166,9 +166,10 @@ final List<Story> stories = [
 final List<Post> posts = [
   Post(
     user: currentUser,
-    caption: 'Check out these cool puppers',
+    caption:
+        'My Flutter journey is moving well. Just made this Facebook UI clone',
     timeAgo: '58m',
-    imageUrl: 'https://images.unsplash.com/photo-1525253086316-d0c936c814f8',
+    imageUrl: 'https://i.imgur.com/q0s4OSm.png',
     likes: 1202,
     comments: 184,
     shares: 96,
