@@ -143,8 +143,21 @@ class _HomeScreenDesktop extends StatelessWidget {
               SliverPadding(
                 padding: const EdgeInsets.fromLTRB(0, 20, 0, 10),
                 sliver: SliverToBoxAdapter(
-                  child: Stories(currentUser: currentUser, stories: stories),
+                  child: Column(
+                    children: [
+                      WidgetScreen(
+                        currentUser: currentUser,
+                        stories: stories,
+                      ),
+                      const Divider(
+                        height: 0,
+                      ),
+                    ],
+                  ),
                 ),
+              ),
+              SliverToBoxAdapter(
+                child: Stories(currentUser: currentUser, stories: stories),
               ),
               SliverToBoxAdapter(
                 child: CreatePostContainer(currentUser: currentUser),
